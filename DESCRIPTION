@@ -1,0 +1,18 @@
+Package: surveyscores
+Type: Package
+Title: surveyscores
+Version: 0.1.0
+Authors@R: c(
+    person("Hugo", "Marthinet", email = "h.marthinet@gmail.com", role = "cre"),
+    person("Joffrey", "Marchi", email = "joffrey.marchi.cespa@gmail.com", role = "aut"),
+    person("Bakridine", "Mmadi Mrenda", email = "mmadi.cespa@gmail.com", role = "aut"))
+Maintainer: Hugo Marthinet <h.marthinet@gmail.com>
+Description: Ensemble de fonctions de calculs de scores de questionnaires depuis des echelles de reference.
+License: --------
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports: 
+Author: Hugo Marthinet [cre],
+  Joffrey Marchi [aut],
+  Bakridine Mmadi Mrenda [aut]

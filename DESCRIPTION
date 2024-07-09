@@ -4,7 +4,7 @@ Title: surveyscores
 Version: 0.1.0
 Authors@R: person("Hugo", "Marthinet", email = "h.marthinet@gmail.com", role = "cre")
 Maintainer: Hugo Marthinet <h.marthinet@gmail.com>
-Description: Ensemble de fonctions de calculs de scores de questionnaires depuis des echelles de reference.
+Description: Fonctions de calculs de scores de questionnaires depuis des echelles de reference.
 License: --------
 Encoding: UTF-8
 LazyData: true

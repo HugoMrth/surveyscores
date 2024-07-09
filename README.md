@@ -24,6 +24,7 @@ devtools::install_github("HugoMrth/surveyscores")
 ### 2) Disclaimer
 
 The reference surveys this package implement have different versions in every language. This one is based on the French versions and WILL NOT be adequate to treat the results of a foreign version of the same survey.
+Therefore, all of the documentation for this package is in french and will remain that way. This is intentionnal.
 
   
 ### 3) Purpose

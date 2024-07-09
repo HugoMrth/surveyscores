@@ -11,7 +11,7 @@
 }
 
 \description{
-  Ensemble de fonctions de calculs de scores de questionnaires depuis des echelles de reference.
+  Fonctions de calculs de scores de questionnaires depuis des echelles de reference.
 }
 
 \details{
@@ -37,10 +37,10 @@
 }
 
 \seealso{
-  Autres packages developpes au CESPA :
+  Autres packages du meme auteur :
 
-  \code{\link{lazyMe}}, \code{\link{MDBprod}}, \code{\link{manageR}},
-  \code{\link{epiplus}}, \code{\link{NSN}}
+  \code{\link{lazyMe}}, \code{\link{dataDesc}}, \code{\link{manageR}},
+  \code{\link{epiplus}}, \code{\link{sampleSize}}
 }
 
 \examples{

@@ -54,8 +54,8 @@ X <- cbind(sample.int(5, size = 50, replace = TRUE),
 
 sexe <- sample.int(2, size = 50, replace = TRUE)
 
-AUDITC(X, sexe, label.femme = 1)
-
+scores1 <- AUDITC(X, sexe, label.femme = 1)
+head(scores1)
 
 
 
@@ -63,7 +63,8 @@ AUDITC(X, sexe, label.femme = 1)
 X <- matrix(data = sample.int(5, size = 50*6, replace = TRUE),
             ncol = 6)
 
-CAST(X)
+scores2 <- CAST(X)
+head(scores2)
 table(CAST(X)$Classe)
 
 
@@ -74,7 +75,8 @@ X <- matrix(data = sample.int(4, size = 50*14, replace = TRUE),
             ncol = 14)
 
 
-HAD(X)
+scores3 <- HAD(X)
+head(scores3)
 lapply(HAD(X)$Class, table)
 ```
 

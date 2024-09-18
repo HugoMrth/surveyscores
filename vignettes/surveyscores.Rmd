@@ -29,13 +29,52 @@ options(tibble.print_min = 4L, tibble.print_max = 4L)
 library(surveyscores)
 ```
 
-Text
+This package porposes refrence surveys scoring funcions. Assuming the questions are phrased the same, and ordered in the same way as the reference survey, all the functions available will compute the numerical score and associated group using the thresholds as precribed in the reference paper for the given survey. \
+The reference surveys have different versions in every language. This one is based on the French versions and **WILL NOT** be adequate to treat the results of a foreign version of the same survey. Therefore, all of the documentation for this package is in french and will remain that way. This is intentionnal. \
+One **SHOULD NOT** use this package if not working on french data. \
+\
+That being said, let's switch to french :)
 
-## Section
+## Calculs de scores
 
-Text
+Toutes les fonctions du packages suivent le même principe. L'argument **data** part du principe que les questions fournies sont dans le même ordre que le questionnaire de référence.
+Il est donc fortement recommandé de se basé fidelement sur le questionnaire déjà établi. \
+Un score numérique est systématiquement calculé, en associant des valeurs à chaque item et en les additionnant. Ce score est souvent (lorsque c'est possible en se basant sur la litérature)
+associé à des classes calculées depuis des seuils pré-établis. Les sorties des fonctions sont donc sous la forme de listes de vecteurs, le premier associé au score numérique, et le deuxième associé au classes. \
+
+\
+
+Ci-dessous quelques exemples d'utilisation de fonctions :
 
 ```{r, message = FALSE}
-Code
+# AUDIT-C : Alcohol Use Disorders Identification Test
+X <- cbind(sample.int(5, size = 50, replace = TRUE),
+           sample.int(6, size = 50, replace = TRUE),
+           sample.int(5, size = 50, replace = TRUE))
+
+sexe <- sample.int(2, size = 50, replace = TRUE)
+
+AUDITC(X, sexe, label.femme = 1)
+
+
+
+
+# CAST : Cannabis Abuse Screening Test
+X <- matrix(data = sample.int(5, size = 50*6, replace = TRUE),
+            ncol = 6)
+
+CAST(X)
+table(CAST(X)$Classe)
+
+
+
+
+# HAD : Hospital Anxiety and Depression Scale
+X <- matrix(data = sample.int(4, size = 50*14, replace = TRUE),
+            ncol = 14)
+
+
+HAD(X)
+lapply(HAD(X)$Class, table)
 ```
 

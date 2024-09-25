@@ -1,4 +1,4 @@
 library(testthat)
-library(pkg)
+library(surveyscores)
 
 test_check("surveyscores")

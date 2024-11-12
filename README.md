@@ -1,4 +1,6 @@
-# surveyscores
+<p align="center">
+<img src="inst/logo.png" height="200"/> 
+</p>
 
 ## Calculation of score from litterature surveys (FRENCH VERSION)
   

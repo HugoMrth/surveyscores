@@ -5,12 +5,8 @@ HAD <- function(x,
 
   x <- as.data.frame(x)
 
-  if(dim(x)[2] != 14){
-    stop("La matrice d'entrée doit contenir 14 colonnes pour les 14 questions utilisees pour la construction du score.")
-  }
-  if(any(apply(x, 2, function(x) {length(table(x))}) > 4)){
-    stop("Au moins une des questions possede plus de 4 niveaux")
-  }
+  if(dim(x)[2] != 14) stop("La matrice d'entrée doit contenir 14 colonnes pour les 14 questions utilisees pour la construction du score.")
+  if(any(apply(x, 2, function(x) {length(table(x))}) > 4)) stop("Au moins une des questions possede plus de 4 niveaux")
 
 
   for (i in seq(1, 13, 2)) {
@@ -28,7 +24,6 @@ HAD <- function(x,
     }
   }
 
-
   Score_HAD_Anxiete_num <- rowSums(sapply(x[, seq(1, 13, 2)], as.numeric), na.rm = TRUE)
   Score_HAD_Anxiete_cl <- cut(Score_HAD_Anxiete_num,
                               breaks = c(-Inf, 7, 10, Inf),
@@ -43,8 +38,6 @@ HAD <- function(x,
                                  labels = c("Absence de symptomatologie dépressive",
                                             "Symptomatologie dépressive douteuse ",
                                             "Symptomatologie dépressive certaine"))
-
-
 
   Score_HAD_num <- Score_HAD_Anxiete_num + Score_HAD_Depression_num
   Score_HAD_cl <- cut(Score_HAD_num,

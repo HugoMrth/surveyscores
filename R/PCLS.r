@@ -1,13 +1,7 @@
 PCLS <- function(x, inv.scale = FALSE) {
-
   x <- as.data.frame(x)
-
-  if(dim(x)[2] != 17){
-    stop("La matrice d'entrée doit contenir 17 colonnes pour les 17 questions utilisees pour la construction du score.")
-  }
-  if(any(apply(x, 2, function(x) {length(table(x))}) > 5)){
-    stop("Au moins une des questions possede plus de 5 niveaux")
-  }
+  if(dim(x)[2] != 17) stop("La matrice d'entrée doit contenir 17 colonnes pour les 17 questions utilisees pour la construction du score.")
+  if(any(apply(x, 2, function(x) {length(table(x))}) > 5)) stop("Au moins une des questions possede plus de 5 niveaux")
 
   Score_PCLS_num <- rowSums(sapply(x, as.numeric))
 
@@ -21,10 +15,3 @@ PCLS <- function(x, inv.scale = FALSE) {
   return(list(Valeur = Score_PCLS_num,
               Classe = Score_PCLS_cl))
 }
-
-
-# X <- matrix(data = sample.int(5, size = 50*17, replace = TRUE),
-#             ncol = 17)
-#
-# PCLS(X)
-# table(PCLS(X)$Classe)

@@ -2,12 +2,8 @@ OSSS3 <- function(x, inv.scale = FALSE) {
 
   x <- as.data.frame(x)
 
-  if(dim(x)[2] != 3){
-    stop("La matrice d'entrée doit contenir 3 colonnes pour les 3 questions utilisees pour la construction du score.")
-  }
-  if(any(apply(x, 2, function(x) {length(table(x))}) > 5)){
-    stop("Au moins une des questions possede plus de 5 niveaux")
-  }
+  if(dim(x)[2] != 3) stop("La matrice d'entrée doit contenir 3 colonnes pour les 3 questions utilisees pour la construction du score.")
+  if(any(apply(x, 2, function(x) {length(table(x))}) > 5)) stop("Au moins une des questions possede plus de 5 niveaux")
 
 
   if (!inv.scale) {
@@ -31,11 +27,3 @@ OSSS3 <- function(x, inv.scale = FALSE) {
   return(list(Valeur = Score_OSSS_num,
               Classe = Score_OSSS_cl))
 }
-
-
-# X <- cbind(sample.int(4, size = 50, replace = TRUE),
-#            sample.int(5, size = 50, replace = TRUE),
-#            sample.int(5, size = 50, replace = TRUE))
-#
-# OSSS3(X)
-# table(OSSS3(X)$Classe)

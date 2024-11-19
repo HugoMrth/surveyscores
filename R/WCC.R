@@ -4,21 +4,14 @@ WCC <- function(x, sexe, label.femme,
 
   x <- as.data.frame(x)
 
-  if(dim(x)[2] != 27){
-    stop("La matrice d'entrée doit contenir 27 colonnes pour les 27 questions utilisees pour la construction du score.")
-  }
-  if(any(apply(x, 2, function(x) {length(table(x))}) > 4)){
-    stop("Au moins une des questions possede plus de 4 niveaux")
-  }
+  if(dim(x)[2] != 27) stop("La matrice d'entrée doit contenir 27 colonnes pour les 27 questions utilisees pour la construction du score.")
+  if(any(apply(x, 2, function(x) {length(table(x))}) > 4)) stop("Au moins une des questions possede plus de 4 niveaux")
 
-
-  for (i in 1:ncol(x)) {
     if (inv.scale) {
-      x[, i] <- 5 - as.numeric(x[, i])
+      x <- apply(x, 2, function(y) {5 - as.numeric(y)})
     } else {
-      x[, i] <- as.numeric(x[, i])
+      x <- apply(x, 2, function(y) {as.numeric(y)})
     }
-  }
 
 
   score_wcc_prob <- apply(data.frame(x[, c(seq(1, 25, 3), 27)]), 1, sum, na.rm = FALSE)
@@ -75,12 +68,3 @@ WCC <- function(x, sexe, label.femme,
                                   `Coping émotion` = score_wcc_emotion_cat,
                                   `Recherche soutien` = score_wcc_soutien_cat)))
 }
-
-
-# X <- matrix(data = sample.int(4, size = 50*27, replace = TRUE),
-#             ncol = 27)
-#
-# sexe <- sample.int(2, size = 50, replace = TRUE)
-#
-# WCC(X, sexe = sexe, label.femme = 2)
-# lapply(WCC(X, sexe = sexe, label.femme = 2)$Class, table)

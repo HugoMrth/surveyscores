@@ -4,7 +4,7 @@
 \name{CCI}
 \alias{Elixhauser.CI}
 \description{
-  Compile le score de Charlson de comorbidité (Charlson Comorbidity Index). Retourne la valeur du score ainsi que la probabilite de survie à 10 telle que déterminer par la methode de Charlson. Les colonnes du jeu de donnees en entree doivent respecter l'ordre preetabli par la grille de notation.
+  Compile le score de Charlson de comorbidité. Retourne la valeur du score ainsi que la probabilite de survie à 10 telle que déterminer par la methode de Charlson. Les colonnes du jeu de donnees en entree doivent respecter l'ordre preetabli par la grille de notation.
 }\usage{
   Elixhauser.CI(x)
 }\arguments{
@@ -24,6 +24,6 @@ van Walraven, Carl, et al. "A modification of the Elixhauser comorbidity measure
   Hugo Marthinet
 }
 \examples{
-x <- cbind(35:84, matrix(sample.int(2, 50*19, replace = TRUE, prob = c(0.9, 0.1))-1, ncol = 19))
+x <- cbind(matrix(sample.int(2, 50*30, replace = TRUE, prob = c(0.9, 0.1))-1, ncol = 30))
 Elixhauser.CI(x)
 }

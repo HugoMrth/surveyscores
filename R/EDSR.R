@@ -1,22 +1,9 @@
 EDSR <- function(x, inv.scale = FALSE) {
-
-
   x <- as.data.frame(x)
+  if(dim(x)[2] != 21) stop("La matrice d'entrée doit contenir 21 colonnes pour les 21 questions utilisees pour la construction du score.")
+  if(any(apply(x, 2, function(x) {length(table(x))}) > 6)) stop("Au moins une des questions possede plus de 6 niveaux")
 
-  if(dim(x)[2] != 21){
-    stop("La matrice d'entrée doit contenir 21 colonnes pour les 21 questions utilisees pour la construction du score.")
-  }
-  if(any(apply(x, 2, function(x) {length(table(x))}) > 6)){
-    stop("Au moins une des questions possede plus de 6 niveaux")
-  }
-
-
-  if (inv.scale) {
-    for (i in 1:ncol(x)) {
-      x[, i] <- 7 - as.numeric(x[, i])
-    }
-  }
-
+  if (inv.scale) x <- apply(x, 2, function(y) {7 - as.numeric(y)})
 
   Score_EDSR_Sevrage <-
     rowSums(sapply(x[, c(1, 8, 15)], as.numeric), na.rm = TRUE)
@@ -108,10 +95,3 @@ EDSR <- function(x, inv.scale = FALSE) {
                                   Intention = Dim_Intention),
               Classe = Score_EDSR_Global))
 }
-
-
-# X <- matrix(data = sample.int(6, size = 50*21, replace = TRUE),
-#             ncol = 21)
-#
-# EDSR(X)
-# table(EDSR(X)$Classe)

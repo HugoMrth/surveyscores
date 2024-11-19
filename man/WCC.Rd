@@ -31,7 +31,7 @@
 \author{
   Hugo Marthinet
 }\examples{
-X <- matrix(data = sample.int(5, size = 50*27, replace = TRUE),
+X <- matrix(data = sample.int(4, size = 50*27, replace = TRUE),
             ncol = 27)
 
 sexe <- sample.int(2, size = 50, replace = TRUE)

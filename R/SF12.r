@@ -1,10 +1,6 @@
 SF12 <- function(x) {
 
-  if(dim(x)[2] != 12){
-    stop("La matrice d'entrée doit contenir 12 colonnes pour les 12 questions utilisees pour la construction du score.")
-  }
-
-
+  if(dim(x)[2] != 12) stop("La matrice d'entrée doit contenir 12 colonnes pour les 12 questions utilisees pour la construction du score.")
   x <- as.data.frame(x)
   DATA_SF12_Physique <- DATA_SF12_Mental <- x
 

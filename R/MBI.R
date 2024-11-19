@@ -1,22 +1,17 @@
 MBI <- function(x, inv.scale = FALSE) {
-
-
   x <- as.data.frame(x)
-
-  if(dim(x)[2] != 22){
-    stop("La matrice d'entrée doit contenir 22 colonnes pour les 22 questions utilisees pour la construction du score.")
-  }
-  if(any(apply(x, 2, function(x) {length(table(x))}) > 7)){
-    stop("Au moins une des questions possede plus de 7 niveaux")
-  }
+  if(dim(x)[2] != 22) stop("La matrice d'entrée doit contenir 22 colonnes pour les 22 questions utilisees pour la construction du score.")
+  if(any(apply(x, 2, function(x) {length(table(x))}) > 7)) stop("Au moins une des questions possede plus de 7 niveaux")
 
 
-  for (i in 1:ncol(x)) {
-    if (inv.scale) {
-      x[, i] <- 7 - as.numeric(x[, i])
-    } else {
-      x[, i] <- as.numeric(x[, i]) - 1
-    }
+  if (inv.scale) {
+    x <- apply(x, 2, function(y) {
+      7 - as.numeric(y)
+    })
+  } else {
+    x <- apply(x, 2, function(y) {
+      as.numeric(y) - 1
+    })
   }
 
   # Epuisement Professionnel
@@ -73,10 +68,3 @@ MBI <- function(x, inv.scale = FALSE) {
                                   `Depersonnalisation` = score_mbi_sd_cat,
                                   `Accomplissement Personnel` = score_mbi_sap_cat)))
 }
-
-
-# X <- matrix(data = sample.int(7, size = 50*22, replace = TRUE),
-#             ncol = 22)
-#
-# MBI(X)
-# lapply(MBI(X)$Class, table)

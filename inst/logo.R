@@ -11,7 +11,7 @@ sticker(
   filename = "inst/logo.png",  # Output file name
   #img = "C:/Users/MARTHINETEX/Documents/02 - Code/logo.png",     # Path to your background image
   package = "surveyscores",                 # Package name
-  p_size = 22,
+  p_size = 20,
   p_y = 1.45,
   p_x = 1,# Text size
   s_x = 1,                            # X position of the image

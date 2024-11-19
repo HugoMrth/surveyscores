@@ -12,9 +12,7 @@ IMC <- function(taille, poids, round = TRUE, digits = 1){
   }
 
   # Si taille en centimètre
-  if (all(taille > 100, na.rm = TRUE)) {
-    taille <- taille / 100
-  }
+  if (all(taille > 100, na.rm = TRUE)) taille <- taille / 100
 
   if(round == TRUE){
     imc <- arrondi_loc(poids / (taille * taille), digits = digits)
@@ -29,12 +27,3 @@ IMC <- function(taille, poids, round = TRUE, digits = 1){
   return(list(Valeur = imc,
               Classe = imc_classe))
 }
-
-# IMC(1.71, 69)
-# IMC(171, 69)
-#
-# taille <- c(1.78, 1.56, 1.89, 1.67)
-# poids <- c(74, 56, 85, 96)
-#
-# IMC(taille, poids)
-# IMC(taille*100, poids)

@@ -1,6 +1,6 @@
 export(AUDITC)
 export(CAST)
-export(Charlson.CI)
+export(Charlson)
 export(EDSR)
 export(Elixhauser.CI)
 export(EuroSCORE)

@@ -1,6 +1,52 @@
-EuroSCORE <- function(data) {
-  if(dim(x)[2] != 21) stop("La matrice d'entrée doit contenir 21 colonnes pour les 21 questions utilisees pour la construction du score.")
-  x <- as.data.frame(x)
+EuroSCORE <- function(x = NULL,
+                      top_chir_tho,
+                      top_poids_op1,
+                      top_poids_op2,
+                      top_poids_op3,
+                      top_inter_urg,
+                      top_im,
+                      top_FEVG,
+                      top_eta_preop,
+                      top_endo,
+                      top_ir_dialysis,
+                      top_chir_car,
+                      top_mauv_mob,
+                      top_MRC,
+                      top_AEC,
+                      sexe_f,
+                      age_poids,
+                      top_diab,
+                      top_angor,
+                      top_cla_nyha_2,
+                      top_cla_nyha_3,
+                      top_cla_nyha_4) {
+  if (!is.null(x)) {
+    if(dim(x)[2] != 21) stop("La matrice d'entrée doit contenir 21 colonnes pour les 21 variables utilisees pour la construction du score.")
+    x <- as.data.frame(x)
+  } else (
+    x <- cbind(top_chir_tho,
+               top_poids_op1,
+               top_poids_op2,
+               top_poids_op3,
+               top_inter_urg,
+               top_im,
+               top_FEVG,
+               top_eta_preop,
+               top_endo,
+               top_ir_dialysis,
+               top_chir_car,
+               top_mauv_mob,
+               top_MRC,
+               top_AEC,
+               sexe_f,
+               age_poids,
+               top_diab,
+               top_angor,
+               top_cla_nyha_2,
+               top_cla_nyha_3,
+               top_cla_nyha_4)
+  )
+
   
   levels(x[,1]) <- c(0.2196434, 0)
   levels(x[,2]) <- c(0.0285181, 0)

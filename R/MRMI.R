@@ -1,4 +1,4 @@
-MRMI.ERMI <- function(gender = NULL,
+MRMI <- function(gender = NULL,
                       age = NULL,
                       isch.heart = NULL,
                       cerebro.vasc = NULL,

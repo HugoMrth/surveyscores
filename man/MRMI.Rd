@@ -6,11 +6,8 @@
 \description{
   Compile les score MRMI (Mortality-Related Morbidity Index) et ERMI (Expenditure-Related Morbidity Index).
 }\usage{
-  MRMI(x)
+  MRMI(...)
 }\arguments{
-  \item{x}{
-    La matrice renseignant l'age et les comorbidites des patients. Les 22 colonnes de la matrice doivent etre dans l'ordre.
-}
   \item{genre}{Sexe}
   \item{age}{Age en années}
   \item{isch_heart}{Ischemic heart disease}

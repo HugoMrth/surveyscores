@@ -44,5 +44,51 @@ Constantinou (2018) Two morbidity indices developed in a nationwide population p
   Hugo Marthinet
 }
 \examples{
+ MRMI(gender = "M",
+                       age = 75,
+                       isch.heart = 0,
+                       cerebro.vasc = 0,
+                       heart.fail = 0,
+                       periph.vasc = 0,
+                       diabetes = 1,
+                       cancer = 0,
+                       cancer.hist = 0,
+                       schizo = 0,
+                       depression = 0,
+                       subst.abuse = 0,
+                       dementia = 0,
+                       parkinson = 0,
+                       mult.sclero = 0,
+                       epilespy = 0,
+                       chornic.resp = 1,
+                       infl.bowel = 0,
+                       rheum.arthr = 0,
+                       HIV = 0,
+                       es.renal = 0,
+                       liver.pancr = 0)
+
+
+ MRMI(gender = "M",
+           age = sample(50:90, 100, replace = TRUE),
+           isch.heart = sample(c(0,1), 100, replace = TRUE),
+           cerebro.vasc = sample(c(0,1), 100, replace = TRUE),
+           heart.fail = sample(c(0,1), 100, replace = TRUE),
+           periph.vasc = sample(c(0,1), 100, replace = TRUE),
+           diabetes = sample(c(0,1), 100, replace = TRUE),
+           cancer = sample(c(0,1), 100, replace = TRUE),
+           cancer.hist = sample(c(0,1), 100, replace = TRUE),
+           schizo = sample(c(0,1), 100, replace = TRUE),
+           depression = sample(c(0,1), 100, replace = TRUE),
+           subst.abuse = sample(c(0,1), 100, replace = TRUE),
+           dementia = sample(c(0,1), 100, replace = TRUE),
+           parkinson = sample(c(0,1), 100, replace = TRUE),
+           mult.sclero = sample(c(0,1), 100, replace = TRUE),
+           epilespy = sample(c(0,1), 100, replace = TRUE),
+           chornic.resp = sample(c(0,1), 100, replace = TRUE),
+           infl.bowel = sample(c(0,1), 100, replace = TRUE),
+           rheum.arthr = sample(c(0,1), 100, replace = TRUE),
+           HIV = sample(c(0,1), 100, replace = TRUE),
+          es.renal = sample(c(0,1), 100, replace = TRUE),
+           liver.pancr = sample(c(0,1), 100, replace = TRUE))
 
 }

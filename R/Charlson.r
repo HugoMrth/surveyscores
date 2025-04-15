@@ -1,4 +1,4 @@
-Charlson.CI <- function(x) {
+Charlson <- function(x) {
   x <- as.data.frame(x)
   if(dim(x)[2] != 20) stop("La matrice d'entrée doit contenir 20 colonnes pour les 20 questions utilisees pour la construction du score.")
   if(any(apply(x[, -1], 2, function(x) {length(table(x))}) > 2)) stop("Au moins une des questions possede plus de 2 niveaux alors que les réponses doivent etre binaires.")

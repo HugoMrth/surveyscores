@@ -5,8 +5,8 @@ test_that("Args are checked properly :", {
   expect_error(CAST(X_err))
   expect_error(CAST(X_err_6col))
 
-  expect_error(Charlson.CI(X_err))
-  expect_error(Charlson.CI(X_err_20col))
+  expect_error(Charlson(X_err))
+  expect_error(Charlson(X_err_20col))
 
   expect_error(Elixhauser.CI(X_err))
   expect_error(Elixhauser.CI(X_err_21col))

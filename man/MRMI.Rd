@@ -10,26 +10,26 @@
 }\arguments{
   \item{genre}{Sexe}
   \item{age}{Age en années}
-  \item{isch_heart}{Ischemic heart disease}
-  \item{cerebro}{Cerebrovascular disease}
-  \item{heart_fail}{Heart failure or arrhythmias or valve disease}
-  \item{periph_vasc}{Peripheral vascular disease}
+  \item{isch.heart}{Ischemic heart disease}
+  \item{cerebro.vasc}{Cerebrovascular disease}
+  \item{heart.fail}{Heart failure or arrhythmias or valve disease}
+  \item{periph.vasc}{Peripheral vascular disease}
   \item{diabetes}{Diabetes}
   \item{cancer}{Cancer}
-  \item{cancer_hist}{History of cancer}
-  \item{schiz}{Schizophrenia and delusional diseases}
+  \item{cancer.hist}{History of cancer}
+  \item{schizo}{Schizophrenia and delusional diseases}
   \item{depression}{Depression and mood disorders}
-  \item{substance_abuse}{Substance abuse disorders}
+  \item{subst.abuse}{Substance abuse disorders}
   \item{dementia}{Dementia (including Alzheimer’s disease)}
   \item{parkinson}{Parkinson disease}
-  \item{sclerosis}{Multiple sclerosis or paraplegia or tetraplegia}
+  \item{mult.sclero}{Multiple sclerosis or paraplegia or tetraplegia}
   \item{epilepsy}{Epilepsy}
-  \item{chronic_resp}{Chronic respiratory diseases (including asthma and COPD)}
-  \item{infl_bowel}{Inflammatory bowel diseases}
-  \item{arthritis}{Rheumatoid arthritis or systemic and connective tissue diseases}
-  \item{AIDS}{HIV infection or AIDS}
-  \item{end_renal}{End-stage renal disease}
-  \item{liver_pancreas}{Liver and pancreas diseases (including failures)}
+  \item{chronic.resp}{Chronic respiratory diseases (including asthma and COPD)}
+  \item{infl.bowel}{Inflammatory bowel diseases}
+  \item{rheum.arthr}{Rheumatoid arthritis or systemic and connective tissue diseases}
+  \item{HIV}{HIV infection or AIDS}
+  \item{es.renal}{End-stage renal disease}
+  \item{liver.pancr}{Liver and pancreas diseases (including failures)}
 }
 \value{
   Une liste de deux vecteurs, le premier avec les valeurs du score MRMI le deuxieme le score ERMI.
@@ -57,7 +57,7 @@ Constantinou (2018) Two morbidity indices developed in a nationwide population p
                        parkinson = 0,
                        mult.sclero = 0,
                        epilespy = 0,
-                       chornic.resp = 1,
+                       chronic.resp = 1,
                        infl.bowel = 0,
                        rheum.arthr = 0,
                        HIV = 0,

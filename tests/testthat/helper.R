@@ -239,7 +239,7 @@ X <- matrix(data = sample.int(5, size = 50*6, replace = TRUE),
 cast <- CAST(X)
 
 x <- cbind(35:84, matrix(sample.int(2, 50*19, replace = TRUE, prob = c(0.9, 0.1))-1, ncol = 19))
-cci <- Charlson.CI(x)
+cci <- Charlson(x)
 
 x <- cbind(matrix(sample.int(2, 50*30, replace = TRUE, prob = c(0.9, 0.1))-1, ncol = 30))
 eci <- Elixhauser.CI(x)

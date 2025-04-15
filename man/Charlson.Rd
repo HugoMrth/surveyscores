@@ -11,7 +11,26 @@
   \item{x}{
     La matrice renseignant l'age et les comorbidites des patients. L'age doit etre la première colonne, des 19 comorbidites, codees en binaire, par ordre de gravite.
 }
-}
+  \item{age}{ Age en années.}
+  \item{MI}{Myocardial infarct }
+  \item{cong_HF}{Congestive heart failure }
+  \item{periph_vasc}{Peripheral vascular disease }
+  \item{cerebro}{Cerebrovascular disease }
+  \item{dementia}{Dementia }
+  \item{chronic_pulm}{Chronic pulmonary disease }
+  \item{connect_tissue}{Connective tissue disease }
+  \item{ulcer}{Ulcer disease }
+  \item{mild_liver}{Mild liver disease}
+  \item{diabetes}{Diabetes }
+  \item{hemiplegia}{Hemiplegia }
+  \item{severe_renal}{Moderate or severe renal disease }
+  \item{diabetes_organ_dmg}{Diabetes with end organ damage }
+  \item{tumor}{Any tumor }
+  \item{leukemia}{Leukemia }
+  \item{lymphoma}{Lymphoma }
+  \item{severe_liver}{Moderate or severe liver disease }
+  \item{metastatic_tumor}{Metastatic solid tumor }
+  \item{AIDS}{AIDS}
 \value{
   Une liste de deux vecteurs, le premier avec les valeurs du score, le deuxieme les probabilites de survie a 10 ans associes.
 }

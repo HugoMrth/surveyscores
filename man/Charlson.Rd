@@ -1,12 +1,12 @@
 \title{
-  CCI - Charlson Comorbidity Index
+  Charlson Comorbidity Index
 }
-\name{CCI}
-\alias{Charlson.CI}
+\name{Charlson}
+\alias{Charlson}
 \description{
   Compile le score de Charlson de comorbidité (Charlson Comorbidity Index). Retourne la valeur du score ainsi que la probabilite de survie à 10 telle que déterminer par la methode de Charlson. Les colonnes du jeu de donnees en entree doivent respecter l'ordre preetabli par la grille de notation.
 }\usage{
-  Charlson.CI(x)
+  Charlson(x)
 }\arguments{
   \item{x}{
     La matrice renseignant l'age et les comorbidites des patients. L'age doit etre la première colonne, des 19 comorbidites, codees en binaire, par ordre de gravite.
@@ -27,5 +27,5 @@ Fried L, Bernardini J, Piraino B. Charlson comorbidity index as a predictor of o
 }
 \examples{
 x <- cbind(35:84, matrix(sample.int(2, 50*19, replace = TRUE, prob = c(0.9, 0.1))-1, ncol = 19))
-Charlson.CI(x)
+Charlson(x)
 }

@@ -32,6 +32,7 @@ telle que déterminer par la methode de Charlson. Les colonnes du jeu de donnees
   \item{severe_liver}{Moderate or severe liver disease }
   \item{metastatic_tumor}{Metastatic solid tumor }
   \item{AIDS}{AIDS}
+}
 \value{
   Une liste de deux vecteurs, le premier avec les valeurs du score, le deuxieme les probabilites de survie a 10 ans associes.
 }

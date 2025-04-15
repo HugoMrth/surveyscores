@@ -1,5 +1,7 @@
+export(Adherence)
 export(AUDITC)
 export(CAST)
+export(ContinuityOfCare)
 export(Charlson)
 export(EDSR)
 export(Elixhauser.CI)

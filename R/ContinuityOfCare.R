@@ -1,4 +1,4 @@
-CoC <- function(w, n = NA,
+ContinuityOfCare <- function(w, n = NA,
                 vi = NA, vc = NA, vu = NA, vs = NA) {
   return(
     c(

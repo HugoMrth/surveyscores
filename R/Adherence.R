@@ -1,4 +1,4 @@
-adherence <- function(
+Adherence <- function(
     n.days.supplied = NA,
     n.days.gaps = NA,
     n.days.period = NA,

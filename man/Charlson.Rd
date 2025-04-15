@@ -4,7 +4,8 @@
 \name{Charlson}
 \alias{Charlson}
 \description{
-  Compile le score de Charlson de comorbidité (Charlson Comorbidity Index). Retourne la valeur du score ainsi que la probabilite de survie à 10 telle que déterminer par la methode de Charlson. Les colonnes du jeu de donnees en entree doivent respecter l'ordre preetabli par la grille de notation.
+  Compile le score de Charlson de comorbidité (Charlson Comorbidity Index). Retourne la valeur du score ainsi que la probabilite de survie à 10 ans
+telle que déterminer par la methode de Charlson. Les colonnes du jeu de donnees en entree doivent respecter l'ordre preetabli par la grille de notation.
 }\usage{
   Charlson(x)
 }\arguments{

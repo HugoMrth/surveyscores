@@ -11,6 +11,27 @@
     La matrice des 21 variables nécessaires à la construction du score. 
     La matrice doit être en facteurs et les questions et modalites dans le memes ordre que dans l'exemple ci-dessous.
 }
+  \item{top_chir_tho}{Antécédants de chirurgie thoracique dans les 4 ans précédents}
+  \item{top_poids_op1}{Poids de l'opération lors du séjour index}
+  \item{top_poids_op2}{Poids de l'opération lors du séjour index}
+  \item{top_poids_op3}{Poids de l'opération lors du séjour index}
+  \item{top_inter_urg}{Entrée par les urgences lors du séjour index}
+  \item{top_im}{Antécédants d'infarctus du myocarde dans les 3 mois précédents}
+  \item{top_FEVG}{Antécédants de fraction d'éjection ventriculaire gauche dans les 12 mois précédents (FEVG altéré = seulement les médicaments/FEVG = médicaments + hospit)}
+  \item{top_eta_preop}{Etat préopératoire critique lors du séjour index}
+  \item{top_endo}{Antécédants d'endocardite active dans les 3 mois précédents et dans le séjour index}
+  \item{top_ir_dialysis}{Antécédants d'insuffisance rénale chronique dans les 12 mois précédents}
+  \item{top_chir_car}{Antécédants de chirurgie cardiaque dans les 4 ans précédents}
+  \item{top_mauv_mob}{Antécédants de mauvaise mobilité dans les 4 ans précédents}
+  \item{top_MRC}{Antécédants de maladies respiratoire chronique dans les 12 mois précédents}
+  \item{top_AEC}{Antécédants d'artériopathie extracardiaque dans les 12 mois (4 ans pour les actes) précédents}
+  \item{sexe_f}{Sexe Féminin}
+  \item{age_poids}{Age}
+  \item{top_diab}{Antécédants de diabète sous insuline dans les 12 mois précédents}
+  \item{top_angor}{Antécédants d'angor CCS dans les 12 mois précédents}
+  \item{top_cla_nyha_2}{Classe NYHA II}
+  \item{top_cla_nyha_3}{Classe NYHA III}
+  \item{top_cla_nyha_4}{Classe NYHA IV}
 }
 \value{
   Un vecteur de scores.
